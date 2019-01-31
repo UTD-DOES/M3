@@ -26,8 +26,8 @@ Source the excutive_function.R code to run a test case.
 
 ## Authors
 
-* **Cong Feng** - *UT Dallas*
-* **Mucun Sun** - *UT Dallas*
+* **Cong Feng** - *UT Dallas* (Cong.Feng1@utdallas.edu)
+* **Mucun Sun** - *UT Dallas* (Mucun.Sun@utdallas.edu)
 * **Jie Zhang** - *UT Dallas* (jiezhang@utdallas.edu)
 
 ## License
