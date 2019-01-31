@@ -28,7 +28,7 @@ Source the excutive_function.R code to run a test case.
 
 * **Cong Feng** - *UT Dallas*
 * **Mucun Sun** - *UT Dallas*
-* **Jie Zhang** - *UT Dallas*
+* **Jie Zhang** - *UT Dallas* (jiezhang@utdallas.edu)
 
 ## License
 
