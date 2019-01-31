@@ -3,7 +3,8 @@ The Machine Learning-based Multi-Model (M3) forecasting framework is able to gen
 
 The M3 probabilistic forecasts are generated based on the M3 deterministic forecasts and pinball loss optimization. The M3 deterministic forecast is assumed to be the mean value of the predictive distribution at each forecasting time stamp. Then, the optimal unknown parameter (i.e., standard deviation) of the predictive distribution is estimated by minimizing the pinball loss. Finally, probabilistic forecasts are generated from the predictive distribution.
 
-## WindView is wind power visualization software which enables power system operators to better understand static and forecast information on their power system.
+## WindView 
+WindView is wind power visualization software which enables power system operators to better understand static and forecast information on their power system.
 https://github.com/windview
 
 
