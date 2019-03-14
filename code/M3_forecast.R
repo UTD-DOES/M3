@@ -6,7 +6,7 @@
 # 4 Coder: Cong Feng        Date: 2018/01/02       @ DOES Lab, UTD
 #--------------------------------------------------------------------------------
 
-MMFF_forecast <- function(forecasting_data, name_loc, th, root_model2, root_code2){
+M3_forecast <- function(forecasting_data, name_loc, th, root_model2, root_code2){
   cat("Forecasting with time horizon (hrs):", th, "\n")
   
   # load model
