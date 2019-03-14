@@ -6,7 +6,7 @@
 # 4 Coder: Cong Feng        Date: 2017/12/18       @ DOES Lab, UTD
 #--------------------------------------------------------------------------------
 
-MMFF_train <- function(training_data, th, code_root1, root_savefile, part2, name_loc){
+M3_train <- function(training_data, th, code_root1, root_savefile, part2, name_loc){
   
   print('Training Multi-Model Forecasting Framework ...')
   # setting up system time calculation
