@@ -1,5 +1,5 @@
 #--------------------------------  NOTE  ----------------------------------------
-# 1 This code includes MMFF forecasting and post-process
+# 1 This code includes M3 forecasting and post-process
 # 2 Coder: Cong Feng        Date: 2018/01/02       @ DOES Lab, UTD
 #--------------------------------------------------------------------------------
 UTD_forecast <- function(root_code, root_data, root_fcdata, root_model, root_savefile, va_frc){
@@ -8,7 +8,7 @@ UTD_forecast <- function(root_code, root_data, root_fcdata, root_model, root_sav
   # Load in functions
   source(paste0(root_code,'data_normalization2.R'))
   source(paste0(root_code,'data_denormalization.R'))
-  source(paste0(root_code,'MMFF_forecast.R'))
+  source(paste0(root_code,'M3_forecast.R'))
   source(paste0(root_code,'EvaMetrics.R'))
   library(lubridate)
   # Load in Main.csv
@@ -32,7 +32,7 @@ UTD_forecast <- function(root_code, root_data, root_fcdata, root_model, root_sav
     # Forecast different time horizons
     for(no_th in 1:th_loc){
       data_forecast <- data_norm[(nrow(data_norm)-24),]
-      result_hr <- MMFF_forecast(data_forecast, info_main[no_file,1], no_th, root_model, root_code) # forecasting code
+      result_hr <- M3_forecast(data_forecast, info_main[no_file,1], no_th, root_model, root_code) # forecasting code
       results_un[no_th,6:(ncol(results_un)-1)] <- result_hr
       # fill the other matrix elements
       time_start <- as.POSIXct(paste(data_loc$Year,data_loc$Month, data_loc$Day, data_loc$Hour, data_loc$Minute), 
