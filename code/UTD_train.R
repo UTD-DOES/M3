@@ -1,5 +1,5 @@
 #--------------------------------  NOTE  ----------------------------------------
-# 1 This code includes MMFF method and pre-processing methods
+# 1 This code includes M3 method and pre-processing methods
 # 2 Coder: Cong Feng        Date: 2017/12/18       @ DOES Lab, UTD
 #--------------------------------------------------------------------------------
 UTD_train <- function(root_code, root_data, root_model, root_savefile22){
@@ -10,8 +10,8 @@ UTD_train <- function(root_code, root_data, root_model, root_savefile22){
   # load in functions
   source(paste0(root_code,'data_normalization1.R'))
   source(paste0(root_code,'format_data.R'))
-  source(paste0(root_code,'MMFF_train.R'))
-  source(paste0(root_code,'MMFF_forecast.R'))
+  source(paste0(root_code,'M3_train.R'))
+  source(paste0(root_code,'M3_forecast.R'))
   source(paste0(root_code,'data_denormalization.R'))
   
   # read in Main.csv
@@ -35,10 +35,10 @@ UTD_train <- function(root_code, root_data, root_model, root_savefile22){
       data_train <- format_data(data_norm, no_th, 'power')
       data_train1 <- data_train[1:floor(1/12*nrow(data_train)),]
       data_train2 <- data_train[(floor(1/12*nrow(data_train))+1):nrow(data_train),]
-      # Train MMFF models
-      #MMFF_train(data_train, no_th, root_code, root_model, part2, info_main[no_file,1])
-      MMFF_train(data_train, no_th, root_code, root_model, part2, info_main[no_file,1])
-      result_hr <- MMFF_forecast(data_train1[,-ncol(data_train1)], info_main[no_file,1], no_th, root_model, root_code) # forecasting code
+      # Train M3 models
+      #M3_train(data_train, no_th, root_code, root_model, part2, info_main[no_file,1])
+      M3_train(data_train, no_th, root_code, root_model, part2, info_main[no_file,1])
+      result_hr <- M3_forecast(data_train1[,-ncol(data_train1)], info_main[no_file,1], no_th, root_model, root_code) # forecasting code
       result_hr2 <- data.frame(result_hr$gbm4, data_train1$target)
       # define repeat column function
       rep.col<-function(x,n){
