@@ -20,7 +20,22 @@ These instructions will get you a copy of the project up and running on your loc
 Once R and RStudio are installed. Open R or RStudio and install the following packages.
 
 ```
-install.packages('gbm)
+install.packages('gbm')
+install.packages('stats')
+install.packages('fBasics')
+install.packages('caret')
+install.packages('e1071')
+install.packages('randomForest')
+install.packages('RSNNS')
+install.packages('nnet')
+
+
+
+
+
+
+
+
 ```
 
 ## Running the tests
